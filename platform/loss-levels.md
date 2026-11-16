@@ -1,0 +1,44 @@
+---
+title: Loss levels
+summary: 'Two levels per pod: at the first, its capital is halved; at the second, it closes. Measured from the pod''s peak.'
+tags:
+- loss levels
+- stop
+- drawdown
+- halve
+- close
+- peak
+- risk
+- limits
+related:
+- risk-agent
+- pods
+- chat
+---
+
+# Loss levels
+
+## For agents
+
+- Lets you: Read a pod's loss levels.
+- Tools: `pods_fund`
+- Limit: No MCP tool changes loss levels; the user sets them in chat or the app.
+
+## Defaults
+
+| Level | Default | Does |
+|---|---|---|
+| Halve | -5% from the pod's peak | Halves the pod's capital |
+| Close | -7.5% from the pod's peak | Closes the pod |
+
+## Bounds
+
+- The close level is between 3% and 50%.
+- The halve level is between 0 and the close level.
+- Set them for the fund (every pod's default) or for one pod.
+- Lyra suggests every default; you change it in one line ("close Sober Curious at -10%").
+
+## Who acts
+
+- The Risk Agent enforces both levels. It does not ask first.
+- On a live Hyperliquid account, stop orders sit on the venue as well.
