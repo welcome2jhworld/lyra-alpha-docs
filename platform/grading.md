@@ -39,6 +39,7 @@ The last 15 times alcohol sales slipped like this, the trade held 10 times. 2016
 
 - Each dot is one past case: a start date and a horizon.
 - A filled dot: the claim held over that case.
+- Hit rate: the filled dots over all dots, as "10 of 15 past cases".
 - Lyra says it as "It held in 10 of 15 past cases."
 
 ## The four grades
@@ -54,6 +55,7 @@ The last 15 times alcohol sales slipped like this, the trade held 10 times. 2016
 - Only Awesome Idea can run a rule pod. [Rule pods](rules.md).
 - Past cases need at least 730 days of history.
 - An event check needs at least 10 events.
+- Every grade uses the full history, on every plan. Your plan sets only how many years of past cases you see. [Plans and limits](plans.md).
 
 ## The sealed 365 days
 
@@ -80,6 +82,7 @@ The last 15 times alcohol sales slipped like this, the trade held 10 times. 2016
 ## What you see
 
 - Grade and one line: "Good Idea. It held in 10 of 15 past cases."
+- Hit rate.
 - Holding cost per month.
 - Versions tried.
 - A curve when the book holds at least 5 names on average, at most 250 points.

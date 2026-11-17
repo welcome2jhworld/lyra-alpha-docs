@@ -5,7 +5,6 @@ tags:
 - rule
 - rule pod
 - formula
-- signal
 - alpha
 - daily job
 - decaying
@@ -39,7 +38,7 @@ related:
 ## Decay
 
 - Lyra keeps the rule's tested range.
-- A rule whose live return stays under that range is marked decaying.
+- A rule whose live result stays under that range is marked decaying.
 - Watch flags a steady fall as fading. [Watch and the weekly letter](watch.md).
 
 ## Example formula

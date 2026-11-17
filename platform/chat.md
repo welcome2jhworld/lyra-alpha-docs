@@ -39,7 +39,8 @@ related:
 - Explains what the Risk Agent changed and why.
 - Edits a pod's weights or loss levels when you ask.
 - Closes a pod when you ask.
-- Reads market data: prediction markets, 13F holdings, congress trades, rates, ETF holdings, whale positions.
+- Reads market data: prediction markets, rates, whale positions.
+- Uses congressional trades, 13F and ETF holdings in checks.
 
 ## Cards
 
@@ -52,6 +53,23 @@ related:
 
 - Numbers on cards come from code, not from the model.
 - A card from your own agent (over MCP) is labelled "From <token name>".
+
+## Suggested answers
+
+When Lyra asks about an angle, she offers two or three answers to tap. The last one leaves it to her.
+
+A turn's blocks end with a `text` block (the question), then a `choice` block:
+
+```json
+{"type": "choice", "id": "3f9a1c0b2d4e", "buttons": [
+  {"text": "The metal", "data": "The metal"},
+  {"text": "Miners", "data": "Miners"},
+  {"text": "You pick", "data": "You pick"}]}
+```
+
+- A tap sends `data` as the user's next message, so the thread reads as if they typed it.
+- `data` that starts with `vg:` or `ap:` is a card action, not an answer.
+- At most one question per turn. Named tickers get a draft, not a question.
 
 ## Credits
 

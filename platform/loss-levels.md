@@ -1,11 +1,12 @@
 ---
 title: Loss levels
-summary: 'Two levels per pod: at the first, its capital is halved; at the second, it closes. Measured from the pod''s peak.'
+summary: 'Two levels per pod: at the first, its capital is reduced; at the second, it closes. Measured from the pod''s peak.'
 tags:
 - loss levels
 - stop
 - drawdown
-- halve
+- reduce
+- reduced
 - close
 - peak
 - risk
@@ -28,13 +29,13 @@ related:
 
 | Level | Default | Does |
 |---|---|---|
-| Halve | -5% from the pod's peak | Halves the pod's capital |
+| Reduce | -5% from the pod's peak | Cuts the pod's capital by 50%; the pod reads Reduced |
 | Close | -7.5% from the pod's peak | Closes the pod |
 
 ## Bounds
 
 - The close level is between 3% and 50%.
-- The halve level is between 0 and the close level.
+- The reduce level is between 0 and the close level. 0 turns it off.
 - Set them for the fund (every pod's default) or for one pod.
 - Lyra suggests every default; you change it in one line ("close Sober Curious at -10%").
 

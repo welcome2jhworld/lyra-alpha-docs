@@ -1,12 +1,11 @@
 ---
 title: Lyra Data Engine
-summary: Lyra's own engine turns raw news, filings, flows and market data into point-in-time signals that every agent, check and alpha reads.
+summary: Lyra's own engine turns raw news, filings, flows and market data into point-in-time fields that every agent, check and alpha reads.
 tags:
 - data engine
 - lyra data engine
 - lde
 - lde.score
-- signals
 - fields
 - point in time
 - look-ahead
@@ -26,13 +25,13 @@ related:
 ## For agents
 
 - Lets you: Know what data Lyra has, what each value means, and when it was known.
-- Tools: `data_fields`, `data_what_changed`, `data_prediction_markets`, `data_fund_holdings`, `data_congress_trades`, `data_rates`, `data_etf_holdings`, `data_hl_whale_positions`
+- Tools: `data_fields`, `data_what_changed`, `data_prediction_markets`, `data_rates`, `data_hl_whale_positions`
 - Limit: Values are not published as raw series; agents read them through checks, alphas and the data_* tools.
 
 ## In, engine, out
 
 ```figure data-engine
-News: brewer cuts its volume outlook → Filing: 10-Q, beverage revenue up → Data: funding at a yearly high → Lyra Data Engine → lde.score: -38 (of ±80) → sec.revenue_yoy: +0.21 → funding.spread_hl_ann: +0.12
+News: brewer cuts its volume outlook → Filing: 10-Q, beverage revenue up → Data: funding at a yearly high → Lyra Data Engine → lde.score: -0.48 → sec.revenue_yoy: +0.21 → funding.spread_hl_ann: +0.12
 ```
 
 ## What goes in
@@ -45,25 +44,26 @@ News: brewer cuts its volume outlook → Filing: 10-Q, beverage revenue up → D
 | Flows and positioning | funding, open interest, Binance, Bybit and OKX long/short, Hyperliquid whales, CFTC COT |
 | Holdings | 13F of large managers, ETF holdings files |
 | Macro and rates | FRED, Treasury curve, ALFRED vintages, fear and greed, stablecoin supply |
-| Events | earnings and macro calendars, Polymarket and Kalshi odds, House trades |
+| Events | earnings and macro calendars, Polymarket and Kalshi odds, congressional trades |
 
 ## What the engine does
 
 1. Collects each source and drops duplicates.
-2. Cleans text, links it to instruments, merges the same story from many outlets, and counts corroboration.
-3. Scores each document for each instrument it touches, after a credibility gate per source.
+2. Cleans text, links it to instruments, and merges the same story from many outlets.
+3. Reads each story for each instrument it touches.
 4. Writes every value in one format: instrument, value, unit, the date it describes (`as_of`) and the time it was first public (`known_at`).
 5. Tracks staleness per dataset. A pod whose data is stale holds new adds.
 
 ## What comes out
 
 - Fields with a name, a unit and a scope. Every field: [Field catalog](fields.md).
-- `lde.score`: a signed score from -80 to 80 per document and instrument.
-  - Sign: likely to push the price up (+) or down (-).
-  - Size: expected impact, weighted 5 (negligible), 25 (small), 50 (material), 80 (market-moving).
-  - Levels: low under 15, mid from 15, high from 40, critical from 60.
+- `lde.score`: a signed score from -1 to 1 per instrument and day, decayed over recent stories.
+  - Sign: the story reports facts favourable (+) or unfavourable (-) for the instrument.
+  - Size: impact, from none to major.
+  - Also `lde.up`, `lde.down`, `lde.impact`, `lde.count`, `lde.surprise`, `lde.recap`, `lde.industry.score` and `sec.insider.*`.
 - Ratios, USD, percent and counts for flows, positioning, fundamentals and macro.
-- Tables for holdings, trades and odds, read with the `data_*` tools.
+- Tables for odds, rates and whale positions, read with the `data_*` tools.
+- Congressional trades, 13F and ETF holdings feed checks, alphas and pods as `congress.*`, `inst.*` and `etf.*` fields.
 
 ## Point in time
 

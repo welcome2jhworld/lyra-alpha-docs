@@ -34,7 +34,7 @@ related:
 ## Inside a pod
 
 ```figure pods
-Analyst: own drinks that replace alcohol, short brewers and distillers → Trader: CELH 30%, MNST 20%, short STZ 20%, short DEO 20% → Book: the legs as held → Rule fires: CELH raised its sales outlook, CELH 30% to 33% → Risk: pod -5% from peak, capital halved
+Analyst: own drinks that replace alcohol, short brewers and distillers → Trader: CELH 30%, MNST 20%, short STZ 20%, short DEO 20% → Book: the legs as held → Rule fires: CELH raised its sales outlook, CELH 30% to 33% → Risk: pod -5% from peak, capital reduced
 ```
 
 | Part | Does |
@@ -61,7 +61,7 @@ Analyst: own drinks that replace alcohol, short brewers and distillers → Trade
 |---|---|
 | `funding` | Waiting for money to arrive |
 | `active` | Trading |
-| `halved` | Capital halved after the halve loss level |
+| `halved` | Reduced: capital cut by 50% at the reduce loss level |
 | `paused` | Not trading; positions kept |
 | `closed` | Positions closed |
 

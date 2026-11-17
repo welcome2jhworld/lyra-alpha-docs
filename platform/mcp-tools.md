@@ -52,56 +52,6 @@ Example input:
 
 Returns: Markets with yes price, 24h and 7d change, volume and resolve date.
 
-### `data_fund_holdings`
-
-13F holdings of about 50 large funds (Berkshire, Bridgewater, Citadel, Pershing Square, Tiger, Coatue, ARK and others), quarter on quarter: new, added, cut, exited, shares and dollar flow. With a ticker: every tracked fund's position in it. With a manager (part of the name): that fund's biggest moves. With neither: the quarter's most bought and most sold names. quarter like 2026Q2, empty for the latest. Rows carry the filing date and lag_days (13Fs land up to 45 days after quarter end).
-
-- Scope: `read`
-- Plan: Free
-
-Input schema:
-
-```json
-{"type":"object","additionalProperties":false,"properties":{"ticker":{"type":"string"},"manager":{"type":"string"},"quarter":{"type":"string"}},"required":["ticker","manager","quarter"]}
-```
-
-Example input:
-
-```json
-{
-  "ticker": "CELH",
-  "manager": "",
-  "quarter": ""
-}
-```
-
-Returns: 13F holders of a ticker or one manager's book, with quarter on quarter changes.
-
-### `data_congress_trades`
-
-Stock and option trades House members disclosed in periodic transaction reports (House Clerk; the Senate is not collected): member, ticker, buy or sell, amount range, trade date, disclosure date and lag_days (members have up to 45 days to disclose). Filter by ticker or member (part of the name) over the last days (default 90). With neither: most bought by members over 30 and 90 days and the latest disclosures.
-
-- Scope: `read`
-- Plan: Free
-
-Input schema:
-
-```json
-{"type":"object","additionalProperties":false,"properties":{"ticker":{"type":"string"},"member":{"type":"string"},"days":{"type":"number"}},"required":["ticker","member","days"]}
-```
-
-Example input:
-
-```json
-{
-  "ticker": "STZ",
-  "member": "",
-  "days": 90
-}
-```
-
-Returns: House trades: member, ticker, side, amount range, trade and disclosure dates.
-
 ### `data_rates`
 
 Rates and macro series from FRED and the Treasury yield curve: latest value and date, change since the previous print, over 1 week and 1 month, plus 2s10s and 3m10y. series is empty for all, or a comma list of ids or words (DGS10, ust.2y, sofr, cpi, payrolls, high yield); with series and days above 0 it adds the history over that many days.
@@ -125,30 +75,6 @@ Example input:
 ```
 
 Returns: Rates and macro series with each value's date and source.
-
-### `data_etf_holdings`
-
-Daily issuer holdings files for SPY, DIA, MDY, the sector SPDRs (XLK, XLF, XLE, XLV, XLY, XLP, XLI, XLB, XLU, XLRE, XLC), KRE, XBI, XME, XAR, XSD and ARKK, ARKW, ARKG, ARKQ, ARKF: weight in percent, change since the previous file and over 7 days, shares. fund gives its top 25 holdings; ticker gives every tracked ETF that holds it; both empty lists the funds with their top 5.
-
-- Scope: `read`
-- Plan: Free
-
-Input schema:
-
-```json
-{"type":"object","additionalProperties":false,"properties":{"fund":{"type":"string"},"ticker":{"type":"string"}},"required":["fund","ticker"]}
-```
-
-Example input:
-
-```json
-{
-  "fund": "XLP",
-  "ticker": ""
-}
-```
-
-Returns: An ETF's holdings and weights, with adds and drops.
 
 ### `data_hl_whale_positions`
 
@@ -176,7 +102,7 @@ Returns: Large Hyperliquid positions: side, size, entry, leverage and moves.
 
 ### `data_what_changed`
 
-What moved in the market data over the last days (1 to 90): biggest prediction market moves and new markets, new 13F filings and their biggest changes, new Congress disclosures and most bought, biggest rate and macro moves, ETF adds, drops and weight moves, and whale position moves and net flows per coin. family is one of prediction_markets, fund_holdings, congress_trades, rates, etf_holdings, hl_whale_positions, or empty for every family.
+What moved in the market data over the last days (1 to 90): biggest prediction market moves and new markets, biggest rate and macro moves, and whale position moves and net flows per coin. family is one of prediction_markets, rates, hl_whale_positions, or empty for every family.
 
 - Scope: `read`
 - Plan: Free

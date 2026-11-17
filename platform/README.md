@@ -21,7 +21,7 @@ Lyra is a personal portfolio manager for retail investors: it turns an idea into
 
 - [Pods](pods.md): A pod is one idea with its own Analyst, Trader, book and forecasts. Lyra runs several in one fund.
 - [Rule pods](rules.md): A rule pod trades a formula whose check graded Awesome Idea. A daily job sets its targets; the Trader steps in only on exceptions.
-- [Loss levels](loss-levels.md): Two levels per pod: at the first, its capital is halved; at the second, it closes. Measured from the pod's peak.
+- [Loss levels](loss-levels.md): Two levels per pod: at the first, its capital is reduced; at the second, it closes. Measured from the pod's peak.
 - [The Risk Agent](risk-agent.md): An independent risk manager that sees every trade before it is placed. It can only reduce or block, and it reports to you.
 - [Watch and the weekly letter](watch.md): Each pod watches its names, news and drivers, checks its own structure and record, and Lyra sends one letter a week.
 
@@ -34,7 +34,7 @@ Lyra is a personal portfolio manager for retail investors: it turns an idea into
 
 ## Lyra Data Engine
 
-- [Lyra Data Engine](data-engine.md): Lyra's own engine turns raw news, filings, flows and market data into point-in-time signals that every agent, check and alpha reads.
+- [Lyra Data Engine](data-engine.md): Lyra's own engine turns raw news, filings, flows and market data into point-in-time fields that every agent, check and alpha reads.
 - [Field catalog](fields.md): Every field and table in the Lyra Data Engine: meaning, unit, update cadence, when it is known, and coverage. Generated from code.
 - [Your own Data Engine](custom-data-engine.md): On Ultra, your research agent builds datasets that become fields only your own rules can read, checked like every other rule.
 

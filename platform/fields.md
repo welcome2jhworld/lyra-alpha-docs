@@ -38,7 +38,7 @@ related:
 | `funding(days)` | Mean daily perp funding over days, annualised | ratio | instrument | daily | at the daily close | 0 | 0 or 1 |  | Hyperliquid perps and HIP-3 names |
 | `open_interest` | Perp open interest in USD, snapshotted after the close | usd | instrument | daily | when published | 1 | 1 only |  | Hyperliquid perps and HIP-3 names |
 
-## Signals
+## Series
 
 | Field | Meaning | Unit | Scope | Updates | Known | Lag hours | Delay | Stale after | Coverage |
 |---|---|---|---|---|---|---|---|---|---|
@@ -60,7 +60,6 @@ related:
 | `sec.revenue_yoy` | SEC XBRL fundamentals | ratio | instrument | daily | when published | 1080 | 1 only | 120 days | HIP-3 equities as HL:xyz:<ticker> |
 | `sec.net_margin` | SEC XBRL fundamentals | ratio | instrument | daily | when published | 1080 | 1 only | 120 days | HIP-3 equities as HL:xyz:<ticker> |
 | `earnings.days_to` | Days to earnings | count | instrument | every 6 h | when published | 0.08 | 1 only | 18 h | HIP-3 equities as HL:xyz:<ticker> |
-| `lde.score` | Lyra Data Engine news and filings score | score | instrument | as published | when published | 0.02 | 1 only | 2 h | Hyperliquid coins as HL:<coin>, HIP-3 names as HL:xyz:<name> |
 | `fred.DFF` | Rates and macro series | pct | global | every 6 h | when published | 96 | 1 only | 4 days | global only ('_') |
 | `fred.SOFR` | Rates and macro series | pct | global | every 6 h | when published | 96 | 1 only | 4 days | global only ('_') |
 | `fred.DGS3MO` | Rates and macro series | pct | global | every 6 h | when published | 96 | 1 only | 4 days | global only ('_') |
@@ -114,10 +113,7 @@ related:
 | Table | MCP tool | Updates | Covers |
 |---|---|---|---|
 | Prediction markets | `data_prediction_markets` | every 1 h | markets tagged with tickers and themes |
-| Fund holdings (13F) | `data_fund_holdings` | every 6 h | US equities by ticker |
-| Congress trades | `data_congress_trades` | every 4 h | US equities by ticker |
 | Rates and macro series | `data_rates` | every 6 h | global only ('_') |
-| ETF holdings | `data_etf_holdings` | every 6 h | ETF tickers and their holdings |
 | Hyperliquid whale positions | `data_hl_whale_positions` | every 1 h | Hyperliquid coins as HL:<coin>, HIP-3 names as HL:xyz:<name> |
 
 ## Reading the columns

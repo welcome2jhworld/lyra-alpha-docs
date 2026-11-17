@@ -31,7 +31,6 @@ A field is known at the daily close or when its source publishes it, plus the la
 | `sec.revenue_yoy` | SEC XBRL fundamentals | ratio | instrument | when published | 1080 | 1 only | HIP-3 equities as HL:xyz:<ticker> |
 | `sec.net_margin` | SEC XBRL fundamentals | ratio | instrument | when published | 1080 | 1 only | HIP-3 equities as HL:xyz:<ticker> |
 | `earnings.days_to` | Days to earnings | count | instrument | when published | 0.08 | 1 only | HIP-3 equities as HL:xyz:<ticker> |
-| `lde.score` | Lyra Data Engine news and filings score | score | instrument | when published | 0.02 | 1 only | Hyperliquid coins as HL:<coin>, HIP-3 names as HL:xyz:<name> |
 | `fred.DFF` | Rates and macro series | pct | global | when published | 96 | 1 only | global only ('_') |
 | `fred.SOFR` | Rates and macro series | pct | global | when published | 96 | 1 only | global only ('_') |
 | `fred.DGS3MO` | Rates and macro series | pct | global | when published | 96 | 1 only | global only ('_') |
@@ -73,4 +72,31 @@ A field is known at the daily close or when its source publishes it, plus the la
 | `ust.10y` | Rates and macro series | pct | global | when published | 24 | 1 only | global only ('_') |
 | `ust.20y` | Rates and macro series | pct | global | when published | 24 | 1 only | global only ('_') |
 | `ust.30y` | Rates and macro series | pct | global | when published | 24 | 1 only | global only ('_') |
+| `lde.score` | Lyra Data Engine news and filings score, decayed, -1 to 1, price recaps left out | ratio | instrument | when published | 0 | 1 only | US stocks and ETFs as US:<ticker>, Hyperliquid perps as <coin>, HIP-3 names as xyz:<name> |
+| `lde.score_raw` | Lyra Data Engine score over every story, price recaps included, -1 to 1 | ratio | instrument | when published | 0 | 1 only | US stocks and ETFs as US:<ticker>, Hyperliquid perps as <coin>, HIP-3 names as xyz:<name> |
+| `lde.recap` | Share of recent stories that only report a past price move, decayed, 0 to 1 | ratio | instrument | when published | 0 | 1 only | US stocks and ETFs as US:<ticker>, Hyperliquid perps as <coin>, HIP-3 names as xyz:<name> |
+| `lde.up` | Share of recent stories with favourable facts, decayed, 0 to 1 | ratio | instrument | when published | 0 | 1 only | US stocks and ETFs as US:<ticker>, Hyperliquid perps as <coin>, HIP-3 names as xyz:<name> |
+| `lde.down` | Share of recent stories with unfavourable facts, decayed, 0 to 1 | ratio | instrument | when published | 0 | 1 only | US stocks and ETFs as US:<ticker>, Hyperliquid perps as <coin>, HIP-3 names as xyz:<name> |
+| `lde.impact` | Largest impact of the stories known that day, 0 to 1 | ratio | instrument | when published | 0 | 1 only | US stocks and ETFs as US:<ticker>, Hyperliquid perps as <coin>, HIP-3 names as xyz:<name> |
+| `lde.count` | Stories known that day, price recaps left out | count | instrument | when published | 0 | 1 only | US stocks and ETFs as US:<ticker>, Hyperliquid perps as <coin>, HIP-3 names as xyz:<name> |
+| `lde.surprise` | Stories that report an outcome against expectations, signed, decayed, -1 to 1 | ratio | instrument | when published | 0 | 1 only | US stocks and ETFs as US:<ticker>, Hyperliquid perps as <coin>, HIP-3 names as xyz:<name> |
+| `lde.impact_score` | Impact-weighted score of recent stories, -1 to 1 | ratio | instrument | when published | 0 | 1 only | US stocks and ETFs as US:<ticker>, Hyperliquid perps as <coin>, HIP-3 names as xyz:<name> |
+| `lde.industry.score` | Industry score from SIC peers and industry stories, members as of the date, -1 to 1 | ratio | instrument | when published | 0 | 1 only | US stocks as US:<ticker>, and HIP-3 names on them |
+| `sec.insider.buy_usd` | Open-market insider buys filed that day (Form 4) | usd | instrument | when published | 0 | 1 only | US stocks as US:<ticker>, and HIP-3 names on them |
+| `sec.insider.sell_usd` | Open-market insider sells filed that day (Form 4) | usd | instrument | when published | 0 | 1 only | US stocks as US:<ticker>, and HIP-3 names on them |
+| `sec.insider.net_usd` | Insider buys minus sells filed that day (Form 4) | usd | instrument | when published | 0 | 1 only | US stocks as US:<ticker>, and HIP-3 names on them |
+| `inst.holders` | 13F filers holding it, from each filer's latest report | count | instrument | when published | 0 | 1 only | US stocks as US:<ticker> |
+| `inst.holders_chg` | New holders minus exits in each filer's latest report | count | instrument | when published | 0 | 1 only | US stocks as US:<ticker> |
+| `inst.shares_chg` | Shares bought minus sold across 13F filers' latest reports | count | instrument | when published | 0 | 1 only | US stocks as US:<ticker> |
+| `inst.net_buy_usd` | Dollar value of 13F filers' share changes, latest reports | usd | instrument | when published | 0 | 1 only | US stocks as US:<ticker> |
+| `inst.value_usd` | Dollar value held by 13F filers | usd | instrument | when published | 0 | 1 only | US stocks as US:<ticker> |
+| `inst.top_holders` | Holders among the tracked large managers, about 50 | count | instrument | when published | 0 | 1 only | US stocks as US:<ticker> |
+| `inst.top_net_buy_usd` | Dollar share changes of the tracked large managers | usd | instrument | when published | 0 | 1 only | US stocks as US:<ticker> |
+| `congress.buys_30d` | Stock buys Congress members disclosed over the last 30 days | count | instrument | when published | 0 | 1 only | US stocks as US:<ticker> |
+| `congress.sells_30d` | Stock sells Congress members disclosed over the last 30 days | count | instrument | when published | 0 | 1 only | US stocks as US:<ticker> |
+| `congress.net_usd_mid_30d` | Buys minus sells at each amount range's midpoint, disclosed over 30 days | usd | instrument | when published | 0 | 1 only | US stocks as US:<ticker> |
+| `etf.holders` | ETFs holding it, from each ETF's latest N-PORT | count | instrument | when published | 0 | 1 only | US stocks as US:<ticker> |
+| `etf.held_usd` | Dollar value held by ETFs | usd | instrument | when published | 0 | 1 only | US stocks as US:<ticker> |
+| `etf.flow_usd` | Dollar value of ETFs' share changes, latest N-PORT vs the one before | usd | instrument | when published | 0 | 1 only | US stocks as US:<ticker> |
+| `obs("etf.weight.<ETF>")` | Weight in <ETF>, percent | pct | instrument | when published | 0 | 1 only | US stocks held by that ETF, from its N-PORT reports |
 | `odds("<market id>")` | Prediction market yes price, last snapshot by the close | ratio | market | at the daily close | 0 | 0 or 1 | Prediction markets by market id |

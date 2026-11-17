@@ -8,7 +8,7 @@
 - [Getting started](https://docs.uselyra.dev/getting-started.md): From sign-in to a first pod on paper in about ten minutes.
 - [How a check grades](https://docs.uselyra.dev/grading.md): A check counts how often the idea held in the past, keeps the last 365 days sealed, and raises the bar with every version you try.
 - [Pods](https://docs.uselyra.dev/pods.md): A pod is one idea with its own Analyst, Trader, book and forecasts. Lyra runs several in one fund.
-- [Lyra Data Engine](https://docs.uselyra.dev/data-engine.md): Lyra's own engine turns raw news, filings, flows and market data into point-in-time signals that every agent, check and alpha reads.
+- [Lyra Data Engine](https://docs.uselyra.dev/data-engine.md): Lyra's own engine turns raw news, filings, flows and market data into point-in-time fields that every agent, check and alpha reads.
 - [Connect over MCP](https://docs.uselyra.dev/mcp.md): Give your own AI agent a token and it can read your fund, run checks, research and propose, through the Lyra MCP.
 - [MCP tool reference](https://docs.uselyra.dev/mcp-tools.md): Every Lyra MCP tool with its scope, plan, input schema and an example input. Generated from the tool registry.
 - [Plans and limits](https://docs.uselyra.dev/plans.md): What each plan unlocks: pods, funds, live money, credits, checks, research depth, alpha tools and Ultra. Generated from code.
@@ -23,7 +23,7 @@
 - [Your Research](https://docs.uselyra.dev/your-research.md): Your own view, in one sentence, becomes a research run: a claim, a check, a read and a fund card you can start on paper.
 - [Telegram](https://docs.uselyra.dev/telegram.md): Link Telegram to hear from Lyra when you are needed, answer decisions with a tap, and talk to Lyra on the go.
 - [Rule pods](https://docs.uselyra.dev/rules.md): A rule pod trades a formula whose check graded Awesome Idea. A daily job sets its targets; the Trader steps in only on exceptions.
-- [Loss levels](https://docs.uselyra.dev/loss-levels.md): Two levels per pod: at the first, its capital is halved; at the second, it closes. Measured from the pod's peak.
+- [Loss levels](https://docs.uselyra.dev/loss-levels.md): Two levels per pod: at the first, its capital is reduced; at the second, it closes. Measured from the pod's peak.
 - [The Risk Agent](https://docs.uselyra.dev/risk-agent.md): An independent risk manager that sees every trade before it is placed. It can only reduce or block, and it reports to you.
 - [Watch and the weekly letter](https://docs.uselyra.dev/watch.md): Each pod watches its names, news and drivers, checks its own structure and record, and Lyra sends one letter a week.
 - [The Book and venues](https://docs.uselyra.dev/book.md): The Book is every leg your pods hold. Each leg goes to one venue by one routing table.

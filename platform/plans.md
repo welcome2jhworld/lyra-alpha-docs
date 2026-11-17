@@ -44,12 +44,13 @@ related:
 | Credits a period | 100 once | 1,500 / 3,000 / 6,000 | 12,000 / 25,000 / 50,000 | 50,000 |
 | Trial credits |  | 300 over 7 days | 1,500 over 7 days | 1,500 over 7 days |
 | Checks a day | 3 | 30 | 200 | 200 |
-| Curve shown | last 2 years | last 5 years | full history | full history |
+| Past cases shown | last 2 years | last 5 years | full history | full history |
 | Research depth | Quick research | Research | Deep research | Deep research |
 | Credits per research run | 50 | 100 | 250 | 250 |
 | Alpha tools over MCP | no | yes | yes | yes |
 | Ultra workspace | no | no | no | by invite |
 
+- Grades use the full history on every plan. Past cases shown sets the years you see.
 - Free runs paper only for 30 days, then pauses.
 - Yearly billing is 15% off.
 

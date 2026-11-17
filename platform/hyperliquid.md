@@ -23,7 +23,7 @@ related:
 
 ## For agents
 
-- Lets you: Explain how live Hyperliquid accounts are set up and protected.
+- Lets you: Explain how live Hyperliquid accounts are set up and what the agent key can do.
 - Tools: `pods_fund`
 - Limit: No tool deposits, withdraws or opens a live fund.
 
@@ -51,5 +51,5 @@ related:
 ## Protection
 
 - Stop orders for each live leg sit on Hyperliquid.
-- Loss levels close or halve pods. [Loss levels](loss-levels.md).
+- Loss levels reduce or close pods. [Loss levels](loss-levels.md).
 - The Risk Agent checks every order first.

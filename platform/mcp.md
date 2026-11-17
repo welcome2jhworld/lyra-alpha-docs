@@ -78,10 +78,7 @@ Any client: Streamable HTTP at `https://api.uselyra.dev/mcp` with `Authorization
 | Tool | Scope | Plan |
 |---|---|---|
 | `data_prediction_markets` | `read` | Free |
-| `data_fund_holdings` | `read` | Free |
-| `data_congress_trades` | `read` | Free |
 | `data_rates` | `read` | Free |
-| `data_etf_holdings` | `read` | Free |
 | `data_hl_whale_positions` | `read` | Free |
 | `data_what_changed` | `read` | Free |
 | `test_run_check` | `read` | Free |

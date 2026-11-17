@@ -54,7 +54,7 @@ related:
 
 - Name: Sober Curious.
 - Fund: Paper. Hyperliquid paper is $10,000 per fund; Alpaca paper is the equity of your linked Alpaca paper account, read live.
-- Loss levels: halve at -5% from peak, close at -7.5%.
+- Loss levels: reduce at -5% from peak, close at -7.5%.
 
 ## Next
 

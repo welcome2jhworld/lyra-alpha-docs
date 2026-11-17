@@ -46,7 +46,7 @@ You: Gen Z is drinking less → Lyra: by when, and what proves it wrong? → Cla
 - Check: the grade and the past-case count.
 - Ends if: what would prove it wrong ("beer sales bounce back").
 - Horizon: how long the claim is meant to hold.
-- Loss levels: halve and close.
+- Loss levels: reduce and close.
 - Money: the share of your fund it takes.
 
 ## Claim types

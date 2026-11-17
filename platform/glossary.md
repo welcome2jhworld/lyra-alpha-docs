@@ -32,6 +32,7 @@ related:
 | Leg | One instrument and side in a book |
 | Check | A test of a claim on past cases with a sealed final period |
 | Past case | One start date and horizon the claim is tested over |
+| Hit rate | Past cases that held over all past cases, as "10 of 15 past cases" |
 | Awesome Idea | The top grade; needed to run a rule pod |
 | Good Idea | Past cases agree; not every test passed |
 | Not sure | Past cases do not back it |
@@ -48,9 +49,10 @@ related:
 | Your Research | Your own views and their research runs |
 | Second look | An idea that is a near miss that holds in recent days and in similar instruments |
 | Lyra Data Engine | Lyra's engine from raw inputs to point-in-time fields |
-| `lde.score` | The engine's news and filings score, -80 to 80 |
+| `lde.score` | The engine's news and filings score, -1 to 1 |
 | Point in time | A value is used only after it was first public |
-| Loss levels | Halve and close levels, from a pod's peak |
+| Loss levels | Reduce and close levels, from a pod's peak |
+| Reduced | A pod whose capital was cut by 50% at its reduce level |
 | Paper | Hyperliquid paper at $10,000 per fund, and your linked Alpaca paper account's equity, read live |
 | Live | Your own accounts, real money |
 | Ultra workspace | An invite-only workspace with a research agent |

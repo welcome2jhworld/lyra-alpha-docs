@@ -41,12 +41,12 @@ related:
 
 - Investors with views ("Gen Z is drinking less") who want them tested before money moves.
 - People who want minutes a week, not a strategy builder.
-- Quants and agents who want to write signals and test them on Lyra's servers.
+- Quants and agents who want to write rules and test them on Lyra's servers.
 
 ## The loop
 
 ```figure overview
-Idea: Gen Z is drinking less → Data: sales, filings, prices → Lyra Data Engine: signals → Research and Quant: the last 15 times, it held 10 → Pod: Analyst and Trader → Book: CELH, MNST long; STZ, DEO short → Live: after you press Start
+Idea: Gen Z is drinking less → Data: sales, filings, prices → Lyra Data Engine: fields → Research and Quant: the last 15 times, it held 10 → Pod: Analyst and Trader → Book: CELH, MNST long; STZ, DEO short → Live: after you press Start
 ```
 
 1. Idea. You say it in one sentence (Your Research), or pick one of Lyra's daily ideas (Public Research).
@@ -82,7 +82,7 @@ Idea: Gen Z is drinking less → Data: sales, filings, prices → Lyra Data Engi
 | Credits a period | 100 once | 1,500 / 3,000 / 6,000 | 12,000 / 25,000 / 50,000 | 50,000 |
 | Trial credits |  | 300 over 7 days | 1,500 over 7 days | 1,500 over 7 days |
 | Checks a day | 3 | 30 | 200 | 200 |
-| Curve shown | last 2 years | last 5 years | full history | full history |
+| Past cases shown | last 2 years | last 5 years | full history | full history |
 | Research depth | Quick research | Research | Deep research | Deep research |
 | Credits per research run | 50 | 100 | 250 | 250 |
 | Alpha tools over MCP | no | yes | yes | yes |
@@ -92,7 +92,7 @@ Full limits: [Plans and limits](plans.md).
 
 ## What runs under it
 
-- Lyra Data Engine: raw inputs to point-in-time signals. [Lyra Data Engine](data-engine.md).
+- Lyra Data Engine: raw inputs to point-in-time fields. [Lyra Data Engine](data-engine.md).
 - Check engine: past cases, a sealed holdout, CPCV. [How a check grades](grading.md).
 - Pods: an Analyst and a Trader per pod. [Pods](pods.md).
 - Risk Agent: limits, loss levels, overlap. [The Risk Agent](risk-agent.md).
