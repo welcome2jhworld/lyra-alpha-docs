@@ -32,7 +32,7 @@ related:
 | Daily | 00:10 UTC |
 | US open | 20 minutes before the US open, for pods with stocks |
 | Funding | 15 minutes before funding, for carry pods |
-| News | a story or filing that moves one of the pod's names |
+| News | a story or filing that matters for one of the pod's names |
 | Filings and ratings | for pods with stocks |
 | Price | a move of 3% for stocks, 5% for crypto |
 | Drivers | a driver in the thesis moves past its threshold |

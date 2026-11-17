@@ -50,6 +50,7 @@ related:
 | Second look | An idea that is a near miss that holds in recent days and in similar instruments |
 | Lyra Data Engine | Lyra's engine from raw inputs to point-in-time fields |
 | `lde.score` | The engine's news and filings score, -1 to 1 |
+| `lde.capital_sec.score` | The same score over capital news and SEC filings only |
 | Point in time | A value is used only after it was first public |
 | Loss levels | Reduce and close levels, from a pod's peak |
 | Reduced | A pod whose capital was cut by 50% at its reduce level |

@@ -60,6 +60,8 @@ News: brewer cuts its volume outlook → Filing: 10-Q, beverage revenue up → D
 - `lde.score`: a signed score from -1 to 1 per instrument and day, decayed over recent stories.
   - Sign: the story reports facts favourable (+) or unfavourable (-) for the instrument.
   - Size: impact, from none to major.
+  - Use it as context: news is often in the price before the story is scored.
+- `lde.capital_sec.score`: the same score over buybacks, dividends, share sales, debt and SEC filings only.
   - Also `lde.up`, `lde.down`, `lde.impact`, `lde.count`, `lde.surprise`, `lde.recap`, `lde.industry.score` and `sec.insider.*`.
 - Ratios, USD, percent and counts for flows, positioning, fundamentals and macro.
 - Tables for odds, rates and whale positions, read with the `data_*` tools.
@@ -84,7 +86,7 @@ News: brewer cuts its volume outlook → Filing: 10-Q, beverage revenue up → D
 ## How alphas use it
 
 ```text
-rank(lde.score)
+rank(lde.capital_sec.score)
 ts_mean(funding.spread_hl_ann, 7)
 obs("fred.DGS10")
 ```

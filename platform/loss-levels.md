@@ -29,7 +29,7 @@ related:
 
 | Level | Default | Does |
 |---|---|---|
-| Reduce | -5% from the pod's peak | Cuts the pod's capital by 50%; the pod reads Reduced |
+| Reduce | -5% from the pod's peak | Cuts the pod's capital by 50% |
 | Close | -7.5% from the pod's peak | Closes the pod |
 
 ## Bounds

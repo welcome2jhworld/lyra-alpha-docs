@@ -82,6 +82,7 @@ A field is known at the daily close or when its source publishes it, plus the la
 | `lde.surprise` | Stories that report an outcome against expectations, signed, decayed, -1 to 1 | ratio | instrument | when published | 0 | 1 only | US stocks and ETFs as US:<ticker>, Hyperliquid perps as <coin>, HIP-3 names as xyz:<name> |
 | `lde.impact_score` | Impact-weighted score of recent stories, -1 to 1 | ratio | instrument | when published | 0 | 1 only | US stocks and ETFs as US:<ticker>, Hyperliquid perps as <coin>, HIP-3 names as xyz:<name> |
 | `lde.industry.score` | Industry score from SIC peers and industry stories, members as of the date, -1 to 1 | ratio | instrument | when published | 0 | 1 only | US stocks as US:<ticker>, and HIP-3 names on them |
+| `lde.capital_sec.score` | Lyra Data Engine score over buyback, dividend, share sale and debt news and SEC filings only, decayed, -1 to 1 | ratio | instrument | when published | 0 | 1 only | US stocks and ETFs as US:<ticker>, Hyperliquid perps as <coin>, HIP-3 names as xyz:<name> |
 | `sec.insider.buy_usd` | Open-market insider buys filed that day (Form 4) | usd | instrument | when published | 0 | 1 only | US stocks as US:<ticker>, and HIP-3 names on them |
 | `sec.insider.sell_usd` | Open-market insider sells filed that day (Form 4) | usd | instrument | when published | 0 | 1 only | US stocks as US:<ticker>, and HIP-3 names on them |
 | `sec.insider.net_usd` | Insider buys minus sells filed that day (Form 4) | usd | instrument | when published | 0 | 1 only | US stocks as US:<ticker>, and HIP-3 names on them |
