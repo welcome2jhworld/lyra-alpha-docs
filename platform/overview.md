@@ -74,7 +74,7 @@ Idea: Gen Z is drinking less → Data: sales, filings, prices → Lyra Data Engi
 
 |  | Free | Plus | Pro | Ultra |
 |---|---|---|---|---|
-| Price a month | $0 | from $39 | from $199 | from $999 |
+| Price a month | $0 | from $39 | from $199 | Custom — [book a call](https://uselyra.dev/contact) |
 | Length | 30 days | monthly or yearly | monthly or yearly | monthly or yearly |
 | Open pods | 1 | 3 | 7 | 7 |
 | Funds | 1 | 2 | 2 | 2 |

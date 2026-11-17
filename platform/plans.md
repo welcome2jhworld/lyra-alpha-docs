@@ -36,7 +36,7 @@ related:
 
 |  | Free | Plus | Pro | Ultra |
 |---|---|---|---|---|
-| Price a month | $0 | from $39 | from $199 | from $999 |
+| Price a month | $0 | from $39 | from $199 | Custom — [book a call](https://uselyra.dev/contact) |
 | Length | 30 days | monthly or yearly | monthly or yearly | monthly or yearly |
 | Open pods | 1 | 3 | 7 | 7 |
 | Funds | 1 | 2 | 2 | 2 |
@@ -64,7 +64,6 @@ related:
 | Pro | 12,000 | $199 | $169 |
 | Pro | 25,000 | $399 | $339 |
 | Pro | 50,000 | $749 | $637 |
-| Ultra | 50,000 | $999 | $849 |
 
 ## What draws credits
 
