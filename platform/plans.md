@@ -36,23 +36,25 @@ related:
 
 |  | Free | Plus | Pro | Ultra |
 |---|---|---|---|---|
-| Price a month | $0 | from $39 | from $199 | Custom — [book a call](https://uselyra.dev/contact/) |
+| Price a month | $0 | from $39 | from $199 | Custom |
 | Length | 30 days | monthly or yearly | monthly or yearly | monthly or yearly |
 | Open pods | 1 | 3 | 7 | 7 |
 | Funds | 1 | 2 | 2 | 2 |
 | Live money | no | yes | yes | yes |
-| Credits a period | 100 once | 1,500 / 3,000 / 6,000 | 12,000 / 25,000 / 50,000 | 50,000 |
+| Credits a period | 100 once | 1,500 / 3,000 / 6,000 | 12,000 / 25,000 / 50,000 | Custom |
 | Trial credits |  | 300 over 7 days | 1,500 over 7 days | 1,500 over 7 days |
 | Checks a day | 3 | 30 | 200 | 200 |
 | Past cases shown | last 2 years | last 5 years | full history | full history |
 | Research depth | Quick research | Research | Deep research | Deep research |
 | Credits per research run | 50 | 100 | 250 | 250 |
 | Alpha tools over MCP | no | yes | yes | yes |
-| Ultra workspace | no | no | no | by invite |
+| Ultra workspace | no | no | no | yes |
 
 - Grades use the full history on every plan. Past cases shown sets the years you see.
 - Free runs paper only for 30 days, then pauses.
 - Yearly billing is 15% off.
+- Ultra: [book a call](https://uselyra.dev/contact/).
+- Cancel anytime; your plan stays active until the end of the period.
 
 ## Credit packs
 
